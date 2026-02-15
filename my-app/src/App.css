@@ -1,0 +1,134 @@
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.toolbar button {
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #343131;
+  font-weight: 500;
+}
+
+.toolbar button:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.toolbar button.active {
+  background: #84878b;
+  color: white;
+}
+
+.toolbar button.active:hover {
+  background: #84878b;
+}
+
+.project-list {
+  column-count: 3;         
+  column-gap: 25px;
+  min-height: 600px;
+}
+
+.project-card {
+  break-inside: avoid;      
+  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;           
+  display: block;
+}
+
+
+.project-list:has(.project-card:nth-child(2):last-child) .project-card {
+  width: calc(33.333% - 17px);
+  min-width: 250px;
+}
+@media (max-width: 768px) {
+  .project-list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-list {
+    column-count: 1;
+  }
+}
+/* .project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+ border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 3/4;  
+  padding: 10px;
+
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; 
+}
+
+
+@media (max-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+} */
